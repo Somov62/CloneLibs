@@ -19,5 +19,15 @@ namespace CloneLibFramework
             }
             return newItem;
         }
+
+        public static void CopyProperties<T>(T target, T source) where T : class, new()
+        {
+            var properties = target.GetType().GetProperties();
+
+            foreach (var property in properties)
+            {
+                property.SetValue(source, property.GetValue(target));
+            }
+        }
     }
 }
