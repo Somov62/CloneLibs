@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloneLibFramework", "CloneLibFramework\CloneLibFramework.csproj", "{436BD902-E094-45BD-97D0-3DD295C77529}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloneLibCore", "CloneLibCore\CloneLibCore.csproj", "{65D01468-FD7B-48C9-B956-41C757CF8E93}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{436BD902-E094-45BD-97D0-3DD295C77529}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{436BD902-E094-45BD-97D0-3DD295C77529}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{436BD902-E094-45BD-97D0-3DD295C77529}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{436BD902-E094-45BD-97D0-3DD295C77529}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65D01468-FD7B-48C9-B956-41C757CF8E93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65D01468-FD7B-48C9-B956-41C757CF8E93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65D01468-FD7B-48C9-B956-41C757CF8E93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65D01468-FD7B-48C9-B956-41C757CF8E93}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2209B9B1-14A9-47D9-86C3-D5F195D3E454}
+	EndGlobalSection
+EndGlobal
