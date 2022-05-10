@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Reflection;
 
-namespace CloneLibFramework
+namespace Multi_Tabular_MVVM.Tools
 {
     public static class Clonator
     {
@@ -15,19 +11,26 @@ namespace CloneLibFramework
             var newItem = new T();
             foreach (var property in properties)
             {
+                if (property.GetCustomAttribute(typeof(CloneIgnore)) != null) continue;
                 property.SetValue(newItem, property.GetValue(item));
             }
             return newItem;
         }
 
-        public static void CopyProperties<T>(T target, T source) where T : class, new()
+        public static void CopyProperties<T>(T from, T to) where T : class, new()
         {
-            var properties = target.GetType().GetProperties();
+            var properties = from.GetType().GetProperties();
 
             foreach (var property in properties)
             {
-                property.SetValue(source, property.GetValue(target));
+                if (property.GetCustomAttribute(typeof(CloneIgnore)) != null) continue;
+                property.SetValue(to, property.GetValue(from));
             }
         }
+    }
+
+    [System.AttributeUsage(System.AttributeTargets.Property)]
+    public class CloneIgnore : System.Attribute
+    {
     }
 }
